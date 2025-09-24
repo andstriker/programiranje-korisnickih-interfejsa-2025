@@ -1,2 +1,8 @@
 # programiranje-korisnickih-interfejsa-2025
-something something
+
+Tehnologije:
+
+Angular 20
+Bootstrap 5
+Fontsawesome 7
+Axios HTTP
