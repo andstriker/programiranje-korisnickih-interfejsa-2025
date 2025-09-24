@@ -1,2 +1,18 @@
 <p>home works!</p>
-<pre>{{webData()}}</pre>
+@if (webData().length > 0) {
+    <div>
+        <ul>
+            @for (question of webData(); track question.text) {
+            <li>{{question.text}}</li>
+        }
+        </ul>
+
+        <!--<pre>{{webData()}}</pre>-->
+    </div>
+}
+@else {
+    <div class="loading">
+        <h1>Podaci se ucitavaju!</h1>
+        <p>Molim sacekajte dok se podaci preuzimaju sa servera...</p>
+    </div>
+}

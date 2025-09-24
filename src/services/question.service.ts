@@ -3,6 +3,7 @@ import { QuestionModel } from "../models/question.model";
 
 const client = axios.create({
     baseURL: 'https://rasa.singidunum.ac.rs/api/question',
+    validateStatus: (status: number) => status === 200,
     headers: {
         'Accept' : 'application/json',
         'X-Name' : 'PKI/2025',

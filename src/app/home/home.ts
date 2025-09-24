@@ -10,9 +10,11 @@ import { QuestionModel } from '../../models/question.model';
 })
 export class Home {
   protected webData = signal<QuestionModel[]>([])
+  protected webError = signal<any>(null)
 
   constructor() {
     QuestionService.getAllAdmissionQuestions()
       .then(rsp => this.webData.set(rsp.data))
+      .catch(e=>this.webError.set(e))
   }
 }
