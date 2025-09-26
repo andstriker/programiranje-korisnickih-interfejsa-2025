@@ -5,7 +5,7 @@ import { App } from './app/app';
 //@ts-ignore
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.bundle.js';
-import '@fortawesome/fontawesome-free/css/all.css';
+import '@fortawesome/fontawesome-free'
 
-bootstrapApplication(App, appConfig) //bootstrap ovdje nema veze sa bs css
+bootstrapApplication(App, appConfig) //bootstrap ovdje nema veze sa BS css
   .catch((err) => console.error(err));
